@@ -53,7 +53,13 @@ class DieView:
         d_dot1.draw(win)
 
         #middle left dot
+        d_dot1 = Circle(Point(80,350), 10) # set center and radius
+        d_dot1.setFill("black")
+        d_dot1.draw(win)
 
-
+        #bottom left dot
+        d_dot1 = Circle(Point(80,400), 10) # set center and radius
+        d_dot1.setFill("black")
+        d_dot1.draw(win)
 
 DieView()
