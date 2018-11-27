@@ -1,5 +1,5 @@
 from graphics import *
-
+win = GraphWin("Dice Roller", 600, 500)
 ############## dice game logic ###########
 
 #import packages
@@ -30,7 +30,7 @@ class MSdie(object):
 
 class DieView:
     def __init__(self):
-        win = GraphWin("Dice Roller", 600, 500)
+       
         #squares
         aRectangle = Rectangle(Point(50,250), Point(250,450))
         bRectangle = Rectangle(Point(300,250), Point(500,450))
@@ -40,7 +40,20 @@ class DieView:
         #draw
         aRectangle.draw(win)
         bRectangle.draw(win)
-        
+        self.dice_dots()
+
         win.getMouse() 
+    
+        
+
+    def dice_dots(self):
+        #top left dot
+        d_dot1 = Circle(Point(80,300), 10) # set center and radius
+        d_dot1.setFill("black")
+        d_dot1.draw(win)
+
+        #middle left dot
+
+
 
 DieView()
