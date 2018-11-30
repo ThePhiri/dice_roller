@@ -1,4 +1,6 @@
-#class definition for an n-sided die
+from graphics import *
+
+############## dice game logic ###########
 
 #import packages
 import random
@@ -22,4 +24,3 @@ class MSdie(object):
         
         value_set = self.value
         return value_set
-
