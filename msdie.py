@@ -1,26 +1,27 @@
-from graphics import *
-
-############## dice game logic ###########
-
-#import packages
+#class definition for an n-sided die
 import random
 
-class MSdie(object):
-#constructor here
-    def __init__(self, num_sides, value):
-        self.value = value
-        self.num_sides = num_sides
+class MSdie:
 
-#define classmethod 'roll' to roll the MSdie
-    def roll(self):
-        self.roll_value = random.randint(1, self.num_sides)
-        roll = self.roll_value
-        return roll
-#define classmethod 'getValue' to return the current value of the MSdie
-    def getValue(self):
-        return self.roll()
-#define classmethod 'setValue' to set the die to a particular value
-    def setValue(self):
-        
-        value_set = self.value
-        return value_set
+  #Current die value
+  current_val = 0
+
+  def __init__(self,numOfSides):
+    self.numOfSides = numOfSides
+
+  #define classmethod 'roll' to roll the MSdie
+  # 
+  def roll(self):
+
+    if self.current_val != 0:
+      return self.current_val
+    else:
+      self.current_val = random.randint(1, self.numOfSides)
+      return self.current_val
+
+  def getValue(self):
+
+    return self.current_val
+
+  def setValue(self, value):
+    self.current_val = value
