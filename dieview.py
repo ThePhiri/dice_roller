@@ -1,7 +1,7 @@
 from graphics import *
 
 class DieView:
-	"""DieView is a widget that displays a graphical representation of a standard six-sided die."""
+	
 
 	def __init__(self, win, center, size):
 		""" create a view of a die e.g: d1 = DieView (myWin, Point(40,50), 20).
@@ -16,7 +16,7 @@ class DieView:
 		offset = 0.6 * hsize		#distance from centre to outer pips
 		
 
-	# create a square for the face
+	# die face
 
 		self.width = size/2
 		self.height = size/2
@@ -49,7 +49,7 @@ class DieView:
 
 	def __makePip(self, x, y):
 		""" Internal helper method to draw a pip at (x,y)"""
-		#CODE
+		
 
 		pip = Circle(Point(x,y), self.psize)
 		pip.setFill(self.background)
@@ -71,7 +71,7 @@ class DieView:
 		self.pip6.setFill(self.background)
 		self.pip7.setFill(self.background)
 
-		# turn correct pips on
+		# turn relevant pips on
 
 		if value == 1:
 			self.pip7.setFill(self.foreground)
